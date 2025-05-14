@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>TICKETTING SYSTEM</title>
+</head>
+<body>
+    <!------------ Navigation ------------>
+    <div class="container">
+        <div class="navigation" onmouseover="showToggle()" onmouseout="hideToggle()">
+            <ul>
+                <li>
+                    <a href="index.html">
+                        <span class="icon"><i class="uil uil-assistive-listening-systems"></i></span>
+                        <span class="title">AutoAsisst</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="index.html">
+                        <span class="icon"><i class="uil uil-home"></i></span>
+                        <span class="title">Dashboard</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="unassigned-tickets.html">
+                        <span class="icon"><i class="uil uil-users-alt"></i></span>
+                        <span class="title">Tickets</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="my-tickets.html">
+                        <span class="icon"><i class="uil uil-users-alt"></i></span>
+                        <span class="title">My Tickets</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="uil uil-bell"></i></span>
+                        <span class="title">Notifications</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="users.html">
+                        <span class="icon"><i class="uil uil-users-alt"></i></span>
+                        <span class="title">User Management </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="generate-reports.html">
+                        <span class="icon"><i class="uil uil-file-graph"></i></span>
+                        <span class="title">Reports</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="troubleshoot-tips-admin.html">
+                        <span class="icon"><i class="uil uil-file-graph"></i></span>
+                        <span class="title">Knowledge Base</span>
+                    </a>
+                </li>
+        
+                <li>
+                    <a href="profile-admin.html">
+                        <span class="icon"><i class="uil uil-user"></i></span>
+                        <span class="title">Profile </span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="uil uil-setting"></i></span>
+                        <span class="title">Settings</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="user-ticket-list.html">
+                        <span class="icon"><i class="uil uil-signout"></i></span>
+                        <span class="title">Sign Out</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+      <!------------ Main ------------>
+      <div class="main">
+        <div class="topbar">
+            <div class="toggle" id="toggle">
+                <i class="uil uil-arrow"></i>
+            </div>
+
+        <div class="search-user-container">
+    
+            <!-- <div class="search">
+                <label>
+                    <input type="text" placeholder="search user">
+                    <i class="uil uil-search"></i>
+                </label>
+            </div> -->
+
+            
+            <div class="new-items">
+                <h4>New <span><i class="uil uil-angle-down"></i></span></h4>
+                <div class="new-items-dropdown">
+                    <a href="#">Ticket</a>
+                    <a href="#">User</a>
+                    <a href="#">Other</a>
+                </div>
+            </div>
+    
+            <div class="user-container">
+                <div class="user-image">
+                    <img src="assets/images/person.png">
+                </div>
+                <div class="dropdown-content">
+                    <a href="index.html">Dashboard</a>
+                    <a href="profile-admin.html">Profile</a>
+                    <a href="#">Settings</a>
+                    <a href="login.html">Logout</a>
+                </div>
+            </div>
+        </div>
+    
+        </div>
+    
+
+
+    <!-------------------Ticket Details--------------------->
+
+<div class="details ticket-form-details ticket-form-details3">
+    <div class="recentOrders">
+        <div class="cardHeader">
+            <h2>Ticket Assignment</h2>
+            <a href="unassigned-tickets.html" class="btn">Back to Ticket List</a>
+        </div>
+
+        <div class="ticket-form">
+            <form action="#" method="post">
+                <div class="form-table3">
+
+                    <table>
+                        <tr>
+                            <td>Created At</td>
+                            <td>2023-09-20 14:30:00</td>
+                        </tr>
+                        <tr>
+                            <td>Reported By</td>
+                            <td>John Doe</td>
+                        </tr>
+
+                        <tr>
+                            <td>Subject</td>
+                            <td>Issue with User Login</td>
+                        </tr>
+                        <tr>
+                            <td>Content</td>
+                            <td>Users are experiencing difficulty logging in to the system.</td>
+                        </tr>
+                        <tr>
+                            <td>Attachments</td>
+                            <td style="cursor: pointer;"><a href="#" style="text-decoration: none; font-style: italic; color: grey;">attachment-1.jpg</a></td>
+                        </tr>                        
+                        <tr>
+                            <td>Severity</td>
+                            <td>High</td>
+                        </tr>
+                        <tr>
+                            <td>Priority</td>
+                            <td>High</td>
+                        </tr>
+                        <tr>
+                            <td>Department</td>
+                            <td>Networking</td>
+                        </tr>
+                    </table>
+                    <div class="options">
+                    <div class="assign-options2" style="margin-top: 10px;">
+                        <h4>Assign To:</h4>
+                        <select name="resolver" id="resolver" style="width: 200px;">
+                            <option value="John Indakwa">John Indakwa, Networking</option>
+                            <option value="Tony Otieno">Tony Otieno, Infrastructure</option>
+                            <option value="Mitchelle Waeni">Mitchelle Waeni, System Adminstration</option>
+                            <option value="Caroline Oranga">Caroline Oranga, Cloud Specialist</option>
+                          </select>
+                    </div>
+                    <div class="assign-options2">
+                        <h4>Set Status</h4>
+                            <select name="resolver" id="resolver" style="width: 200px;">
+                                <option value="All Tickets">In Progress</option>
+                                <option value="Assigned Tickets">Open</option>
+                                <option value="Unassigned Tickets">Closed</option>
+                            </select>
+                    </div>
+                    <div class="assign-options2">
+                        <h4>Set Priority</h4>
+                            <select name="resolver" id="resolver" style="width: 200px;">
+                                <option value=" Low">Low</option>
+                                <option value="Average">Average</option>
+                                <option value="High">High</option>
+                            </select>
+                    </div>
+                </div>
+
+                    
+                </div>
+                <div class="form-group2" style="margin-top: 20px;">
+                    <div class="btn-discard"><button type="submit">Discard</button></div>
+
+                    <div class="btn-reply"><button type="submit">Assign Ticket</button></div>
+                </div>
+
+<!-- Scripts -->
+<script src="assets/main.js"></script>
+
+
+
+</body>
+</html>

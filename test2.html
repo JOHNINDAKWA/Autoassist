@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Driver Dashboard</title>
+ <style>
+  body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  width: 100%;
+}
+
+section {
+  margin-top: 20px;
+  width: 80%;
+}
+
+h2 {
+  color: #333;
+}
+
+.delivery-card {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.status-update {
+  margin-top: 15px;
+}
+
+.status-select {
+  padding: 8px;
+  margin-right: 10px;
+}
+
+.update-status-btn,
+.select-route-btn {
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+}
+ </style>
+</head>
+<body>
+
+  <header>
+    <h1>Driver Dashboard</h1>
+  </header>
+
+  <section class="new-deliveries">
+    <h2>New Deliveries</h2>
+    <!-- Add content for new deliveries here -->
+    <div class="delivery-card">
+      <h3>Order #56789</h3>
+      <p>Status: Pending</p>
+      <p>Description: Delivery from City A to City B</p>
+      <p>Urgency: High</p>
+      <div class="status-update">
+        <label for="status">Update Status:</label>
+        <select id="status" class="status-select">
+          <option value="pending">Pending</option>
+          <option value="in-transit">In Transit</option>
+          <option value="delivered">Delivered</option>
+        </select>
+        <button class="update-status-btn">Update Status</button>
+      </div>
+      <button class="select-route-btn">Select Route</button>
+    </div>
+    <!-- Repeat the above structure for each new delivery -->
+  </section>
+
+  <section class="recent-deliveries">
+    <h2>Recent Deliveries</h2>
+    <!-- Add content for recent deliveries here -->
+    <div class="delivery-card">
+      <h3>Order #12345</h3>
+      <p>Status: Delivered</p>
+      <!-- Additional details about the recent delivery -->
+    </div>
+    <!-- Repeat the above structure for each recent delivery -->
+  </section>
+
+  <footer>
+    &copy; 2023 Driver Dashboard
+  </footer>
+
+</body>
+</html>

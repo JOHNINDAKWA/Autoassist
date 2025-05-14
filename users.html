@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>TICKETTING SYSTEM</title>
+</head>
+<body>
+    <!------------ Navigation ------------>
+    <div class="container">
+        <div class="navigation" onmouseover="showToggle()" onmouseout="hideToggle()">
+            <ul>
+                <li>
+                    <a href="index.html">
+                        <span class="icon"><i class="uil uil-assistive-listening-systems"></i></span>
+                        <span class="title">AutoAsisst</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="index.html">
+                        <span class="icon"><i class="uil uil-home"></i></span>
+                        <span class="title">Dashboard</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="unassigned-tickets.html">
+                        <span class="icon"><i class="uil uil-users-alt"></i></span>
+                        <span class="title">Tickets</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="my-tickets.html">
+                        <span class="icon"><i class="uil uil-users-alt"></i></span>
+                        <span class="title">My Tickets</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="uil uil-bell"></i></span>
+                        <span class="title">Notifications</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="users.html">
+                        <span class="icon"><i class="uil uil-users-alt"></i></span>
+                        <span class="title">User Management </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="generate-reports.html">
+                        <span class="icon"><i class="uil uil-file-graph"></i></span>
+                        <span class="title">Reports</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="troubleshoot-tips-admin.html">
+                        <span class="icon"><i class="uil uil-file-graph"></i></span>
+                        <span class="title">Knowledge Base</span>
+                    </a>
+                </li>
+        
+                <li>
+                    <a href="profile-admin.html">
+                        <span class="icon"><i class="uil uil-user"></i></span>
+                        <span class="title">Profile </span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="uil uil-setting"></i></span>
+                        <span class="title">Settings</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="user-ticket-list.html">
+                        <span class="icon"><i class="uil uil-signout"></i></span>
+                        <span class="title">Sign Out</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+      <!------------ Main ------------>
+      <div class="main">
+        <div class="topbar">
+            <div class="toggle" id="toggle">
+                <i class="uil uil-arrow"></i>
+            </div>
+
+        <div class="search-user-container">
+            
+            <div class="new-items">
+                <h4>New <span><i class="uil uil-angle-down"></i></span></h4>
+                <div class="new-items-dropdown">
+                    <a href="#">Ticket</a>
+                    <a href="#">User</a>
+                    <a href="#">Other</a>
+                </div>
+            </div>
+
+
+    
+            <div class="search">
+                <label>
+                    <input type="text" placeholder="search user">
+                    <i class="uil uil-search"></i>
+                </label>
+            </div>
+
+    
+            <div class="user-container">
+                <div class="user-image">
+                    <img src="assets/images/person.png">
+                </div>
+                <div class="dropdown-content">
+                    <a href="index.html">Dashboard</a>
+                    <a href="#">Notifications</a>
+                    <a href="profile-admin.html">Profile</a>
+                    <a href="#">Settings</a>
+                    <a href="login.html">Logout</a>
+                </div>
+            </div>
+        </div>
+    
+        </div>
+    
+    
+
+    <!-------------------Category section--------------------->
+
+    <div class="details">
+        <div class="recentOrders">
+            <div class="cardHeader">
+                <h2>Users
+                    <span>
+                        <select name="resolver" id="resolver" style="padding: 8px 16px; outline: none; border-radius: 6px; font-size: 16px; margin: 5px;">
+                            <option value="All Users">All </option>
+                            <option value="Admin">Admin </option>
+                            <option value="Technican">Technical Team</option>
+                            <option value="users">Users</option>
+                        </select>
+                    </span>
+                </h2>
+                <div class="status delivered-message"><h4>NEW USER ADDED SUCCESSFULLY</h4></div>
+                <a href="new-user-admin.html"><button id="openModalBtn" class="btn add-btn"> Add New User</button></a>
+               
+            </div>   
+            <table>
+                <thead>
+                    <tr>
+                        <td>First Name</td>
+                        <td>Last Name</td>
+                        <td>Department</td>
+                        <td>Role</td>
+                        <td></td>
+                        <td></td>
+    
+                    </tr>
+                </thead>
+    
+                <tbody>
+                    <tr>
+                        <td>Mitchelle</td>
+                        <td>Waeni</td>
+                        <td>Networking</td>
+                        <td>Admin</td>
+                        <td class="merge-btns">
+                            <button id="openModalBtn2" class="btn-cart-update">UPDATE</button>
+                            <a href="cart.html" class="btn-cart-delete">DELETE</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>John</td>
+                        <td>Vianny</td>
+                        <td>Networking</td>
+                        <td>Admin</td>
+                        <td class="merge-btns">
+                            <button id="openModalBtn2" class="btn-cart-update">UPDATE</button>
+                            <a href="cart.html" class="btn-cart-delete">DELETE</a>
+                        </td>
+                    </tr>                    
+
+                    <tr>
+                        <td>John</td>
+                        <td>Indakwa</td>
+                        <td>Accounting</td>
+                        <td>Others</td>
+                        <td class="merge-btns">
+                            <button id="openModalBtn2" class="btn-cart-update">UPDATE</button>
+                            <a href="cart.html" class="btn-cart-delete">DELETE</a>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Mitchelle</td>
+                        <td>Waeni</td>
+                        <td>Accounting</td>
+                        <td>Admin</td>
+                        <td class="merge-btns">
+                            <button id="openModalBtn2" class="btn-cart-update">UPDATE</button>
+                            <a href="cart.html" class="btn-cart-delete">DELETE</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Mitchelle</td>
+                        <td>Waeni</td>
+                        <td>Accounting</td>
+                        <td>Admin</td>
+                        <td class="merge-btns">
+                            <button id="openModalBtn2" class="btn-cart-update">UPDATE</button>
+                            <a href="cart.html" class="btn-cart-delete">DELETE</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>John</td>
+                        <td>Vianny</td>
+                        <td>Accounting</td>
+                        <td>Admin</td>
+                        <td class="merge-btns">
+                            <button id="openModalBtn2" class="btn-cart-update">UPDATE</button>
+                            <a href="cart.html" class="btn-cart-delete">DELETE</a>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>John</td>
+                        <td>Indakwa</td>
+                        <td>Accounting</td>
+                        <td>Others</td>
+                        <td class="merge-btns">
+                            <button id="openModalBtn2" class="btn-cart-update">UPDATE</button>
+                            <a href="cart.html" class="btn-cart-delete">DELETE</a>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Mitchelle</td>
+                        <td>Waeni</td>
+                        <td>Accounting</td>
+                        <td>Admin</td>
+                        <td class="merge-btns">
+                            <button id="openModalBtn2" class="btn-cart-update">UPDATE</button>
+                            <a href="cart.html" class="btn-cart-delete">DELETE</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>John</td>
+                        <td>Vianny</td>
+                        <td>Accounting</td>
+                        <td>Admin</td>
+                        <td class="merge-btns">
+                            <button id="openModalBtn2" class="btn-cart-update">UPDATE</button>
+                            <a href="cart.html" class="btn-cart-delete">DELETE</a>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>John</td>
+                        <td>Indakwa</td>
+                        <td>Accounting</td>
+                        <td>Others</td>
+                        <td class="merge-btns">
+                            <button id="openModalBtn2" class="btn-cart-update">UPDATE</button>
+                            <a href="cart.html" class="btn-cart-delete">DELETE</a>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Mitchelle</td>
+                        <td>Waeni</td>
+                        <td>Accounting</td>
+                        <td>Admin</td>
+                        <td class="merge-btns">
+                            <button id="openModalBtn2" class="btn-cart-update">UPDATE</button>
+                            <a href="cart.html" class="btn-cart-delete">DELETE</a>
+                        </td>
+                    </tr>
+                </tbody>
+                    
+            </table>
+        </div>
+    
+    
+    
+    </div>
+
+</div>
+
+<!-- script -->
+<script src="assets/main.js">
+
+</script>
+
+
+
+</body>
+</html>

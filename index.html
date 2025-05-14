@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>TICKETTING SYSTEM</title>
+</head>
+<body>
+    <!------------ Navigation ------------>
+    <div class="container">
+        <div class="navigation" onmouseover="showToggle()" onmouseout="hideToggle()">
+            <ul>
+                <li>
+                    <a href="index.html">
+                        <span class="icon"><i class="uil uil-assistive-listening-systems"></i></span>
+                        <span class="title">AutoAsisst</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="index.html">
+                        <span class="icon"><i class="uil uil-home"></i></span>
+                        <span class="title">Dashboard</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="unassigned-tickets.html">
+                        <span class="icon"><i class="uil uil-users-alt"></i></span>
+                        <span class="title">Tickets</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="my-tickets.html">
+                        <span class="icon"><i class="uil uil-users-alt"></i></span>
+                        <span class="title">My Tickets</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="uil uil-bell"></i></span>
+                        <span class="title">Notifications</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="users.html">
+                        <span class="icon"><i class="uil uil-users-alt"></i></span>
+                        <span class="title">User Management </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="generate-reports.html">
+                        <span class="icon"><i class="uil uil-file-graph"></i></span>
+                        <span class="title">Reports</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="troubleshoot-tips-admin.html">
+                        <span class="icon"><i class="uil uil-file-graph"></i></span>
+                        <span class="title">Knowledge Base</span>
+                    </a>
+                </li>
+        
+                <li>
+                    <a href="profile-admin.html">
+                        <span class="icon"><i class="uil uil-user"></i></span>
+                        <span class="title">Profile </span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="uil uil-setting"></i></span>
+                        <span class="title">Settings</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="user-ticket-list.html">
+                        <span class="icon"><i class="uil uil-signout"></i></span>
+                        <span class="title">Sign Out</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+      <!------------ Main ------------>
+      <div class="main">
+        <div class="topbar">
+            <div class="toggle" id="toggle">
+                <i class="uil uil-arrow"></i>
+            </div>
+
+        <div class="search-user-container">
+            
+            <div class="new-items">
+                <h4>New <span><i class="uil uil-angle-down"></i></span></h4>
+                <div class="new-items-dropdown">
+                    <a href="#">Ticket</a>
+                    <a href="#">User</a>
+                    <a href="#">Other</a>
+                </div>
+            </div>
+
+            <div class="search">
+                <label>
+                    <input type="text" placeholder="search here">
+                    <i class="uil uil-search"></i>
+                </label>
+            </div>
+    
+            <div class="user-container">
+                <div class="user-image">
+                    <img src="assets/images/person.png">
+                </div>
+                <div class="dropdown-content">
+                    <a href="index.html">Dashboard</a>
+                    <a href="profile-admin.html">Profile</a>
+                    <a href="#">Settings</a>
+                    <a href="login.html">Logout</a>
+                </div>
+            </div>
+        </div>
+    
+        </div>
+    
+
+
+
+    <!-------------------cards--------------------->
+
+    <div class="cardbox">
+        <div class="card">
+            <div>
+                <div class="numbers">14</div>
+                <div class="cardname">Open Tickets</div>
+            </div>
+        <div class="iconBx">
+            <i class="uil uil-envelope-open"></i>
+        </div>
+    </div>
+
+        <div class="card">
+            <div>
+                <div class="numbers">8</div>
+                <div class="cardname">Pending Tickets</div>
+            </div>
+
+            <div class="iconBx">
+                <i class="uil uil-envelope-upload"></i>
+            </div>
+        </div>
+        
+
+        <div class="card">
+            <div>
+                <div class="numbers">12</div>
+                <div class="cardname">Solved Tickets</div>
+            </div>
+
+            <div class="iconBx">
+                <i class="uil uil-check-circle"></i>
+            </div>
+
+        </div>
+
+        <div class="card">
+        <div>
+            <div class="numbers">4</div>
+            <div class="cardname">Unassigned Tickets</div>
+        </div>
+
+        <div class="iconBx">
+            <i class="uil uil-envelope-times"></i>
+        </div>
+    </div>
+    </div>
+
+
+    <!-------------------------------------Bar Chart--------------------------------------->
+
+    <div class="admin-dashboard">
+        <div class="recentOrders">
+            <div class="cardHeader">
+                <h2>Solved Tickets Overview</h2>
+                <select name="time" id="time" style="padding: 6px 12px; outline: none; border-radius: 8px;">
+                    <option value="today">This Week</option>
+                    <option value="this_week">Last Week</option>
+                  </select>
+            </div>
+    
+            <div class="section_bar-container">
+    
+                <div class="background_grid">
+                    <span class="line" value = "250"></span>
+                    <span class="line" value = "200"></span>
+                    <span class="line" value = "150"></span>
+                    <span class="line" value = "100"></span>
+                    <span class="line" value = "50"></span>
+                    <span class="line" value = "0"></span>
+                </div> 
+        
+                <div class="base"></div>
+        
+                <div class="bar_container">
+                    <div class="bar" style="max-height: 95%;"></div>
+                    <div class="bar" style="max-height: 83%;"></div>
+                    <div class="bar" style="max-height: 80%;"></div>
+                    <div class="bar" style="max-height: 65%;"></div>
+                    <div class="bar" style="max-height: 77%;"></div>
+                </div>
+        
+                <div class="titles">
+                    <span>Monday</span>
+                    <span>Tuesday</span>
+                    <span>Wednesday</span>
+                    <span>Thursday</span>
+                    <span>Friday</span>
+                </div>
+            </div>
+        </div>
+    
+            <!-------------------Pie chart--------------------->
+            <div class="recentCustomers2">
+                <div class="cardHeader2">
+                    <h2>Status Overview</h2>
+                    <select name="time" id="time" style="padding: 6px 12px; outline: none; border-radius: 8px;">
+                        <option value="today">Today</option>
+                        <option value="this_week">This Week</option>
+                        <option value="this_month">This Month</option>
+                        <option value="this_year">This Year</option>
+                      </select>
+                </div>
+            
+
+                    <div class="piechart">
+                        <div id="piechart"></div>
+                    </div>
+
+
+    
+
+    
+    
+    </div>
+    
+    
+    </div>
+
+<!-------------------------------------Status Overview---------------------------------------->
+
+    <div class="admin-dashboard">
+        <div class="recentOrders">
+            <div class="cardHeader2">
+                <h2>Recent Tickets</h2>
+                <a href="orders-admin.html" class="btn">View All</a>
+            </div>
+    
+            <table>
+                <thead>
+                    <tr>
+                        <td>Assigned TO:</td>
+                        <td>Department</td>
+                        <td>Last Updated</td>
+                        <td>Status</td>
+                        <td></td>
+    
+                    </tr>
+                </thead>
+    
+                <tbody>
+                    <tr>
+                        <td>Johnny</td>
+                        <td>Networking</td>
+                        <td>2 mins ago</td>
+                        <td><span class="status delivered">Open</span></td>
+                    </tr>
+                    <tr>
+                        <td>Collo</td>
+                        <td>Infrastructure</td>
+                        <td>3 hours ago</td>
+                        <td><span class="status delivered">Open</span></td>
+    
+                    </tr>
+                    <tr>
+                        <td>Brayo</td>
+                        <td>Infrastructure</td>
+                        <td>10 mins ago</td>
+                        <td><span class="status delivered">Open</span></td>
+                    </tr>
+                    <tr>
+                        <td>Bonny</td>
+                        <td>Networking</td>
+                        <td>1 hour ago</td>
+                        <td><span class="status returned">Closed</span></td>
+                    </tr>
+                    <tr>
+                        <td>Collo</td>
+                        <td>Infrastructure</td>
+                        <td>3 hours ago</td>
+                        <td><span class="status delivered">Open</span></td>
+    
+                    </tr>
+                    <tr>
+                        <td>Brayo</td>
+                        <td>Infrastructure</td>
+                        <td>10 mins ago</td>
+                        <td><span class="status delivered">Open</span></td>
+                    </tr> 
+                </tbody>
+                    
+            </table>
+        </div>
+    
+<!--------------------------------------Top Performers--------------------------------------->
+
+
+            <div class="recentCustomers topPerformers">
+                <div class="cardHeader">
+                    <h2>Top Performers</h2>
+                    <select name="time" id="time" style="padding: 6px 12px; outline: none; border-radius: 8px;">
+                        <option value="today">Today</option>
+                        <option value="this_week">This Week</option>
+                        <option value="this_month">This Month</option>
+                        <option value="this_year">This Year</option>
+                      </select>
+                </div>
+            
+                <div class="table-divide">
+ <table>
+                            <tr>
+                                <td>
+                                    <h4>Mitchelle Waeni<br> <span>300Tickets</span></h4>
+                                </td>
+                            </tr>
+                                <tr>
+                                    <td>
+                                        <h4>Andy Jerry<br> <span>271 Tickets</span></h4>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <h4>Hesbon Otiado<br> <span>265 Tickets</span></h4>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <tr>
+                                        <td>
+                                            <h4>Jillian Dent<br> <span>250 Tickets</span></h4>
+                                        </td>
+                                    </tr>  
+                                    <tr>
+                                        <td>
+                                            <h4>Jillian Dent<br> <span>250 Tickets</span></h4>
+                                        </td>
+                                    </tr>  
+                                    
+                                    
+
+                            </table>
+
+                            
+                            <table>
+                                <tr>
+                                    <td>
+                                        <h4>Mitchelle Waeni<br> <span>300Tickets</span></h4>
+                                    </td>
+                                </tr>
+                                    <tr>
+                                        <td>
+                                            <h4>Andy Jerry<br> <span>271 Tickets</span></h4>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h4>Hesbon Otiado<br> <span>265 Tickets</span></h4>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h4>Jillian Dent<br> <span>250 Tickets</span></h4>
+                                        </td>
+                                    </tr>  
+                                    
+                                    <tr>
+                                        <tr>
+                                            <td>
+                                                <h4>Jillian Dent<br> <span>250 Tickets</span></h4>
+                                            </td>
+                                        </tr>
+
+                                </table>
+                            </div>
+    
+            </div>
+
+</div>
+</div>
+
+
+
+<!-- script -->
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+                    
+<script type="text/javascript">
+// Load google charts
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawChart);
+
+// Draw the chart and set the chart values
+function drawChart() {
+  var data = google.visualization.arrayToDataTable([
+  ['Task', 'Hours per Day'],
+  ['Resolved', 8],
+  ['Pending', 2],
+  ['Assigned', 4],
+  ['Unassigned', 5]
+]);
+
+  // Optional; add a title and set the width and height of the chart
+  var options = { 'width':514, 'height':350};
+
+  // Display the chart inside the <div> element with id="piechart"
+  var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+  chart.draw(data, options);
+}
+</script>
+
+<script>
+const timeIntervalSelect = document.getElementById('timeIntervalSelect');
+
+timeIntervalSelect.addEventListener('change', function () {
+    const selectedValue = timeIntervalSelect.value;
+    // Handle the selected value as needed (e.g., perform an action based on the selection)
+    console.log(`Selected: ${selectedValue}`);
+});
+
+
+</script>
+<script src="assets/main.js">
+
+</script>
+
+
+
+</body>
+</html>

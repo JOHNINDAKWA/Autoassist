@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>TICKETTING SYSTEM</title>
+    <script src="https://cdn.tiny.cloud/1/zvqvu9wlsqcwj3gma48scsy4mwi06zt9htmls5qxucjmkr0t/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+
+
+</head>
+<body>
+    <!------------ Navigation ------------>
+    <div class="container">
+        <div class="navigation" onmouseover="showToggle()" onmouseout="hideToggle()">
+            <ul>
+                <li>
+                    <a href="user-ticket-list.html">
+                        <span class="icon"><i class="uil uil-assistive-listening-systems"></i></span>
+                        <span class="title">AutoAsisst</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="user-ticket-list.html">
+                        <span class="icon"><i class="uil uil-home"></i></span>
+                        <span class="title">Dashboard</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="new-ticket.html">
+                        <span class="icon"><i class="uil uil-users-alt"></i></span>
+                        <span class="title">Report an Issue</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="knowledge-base.html">
+                        <span class="icon"><i class="uil uil-file-graph"></i></span>
+                        <span class="title">Knowledge Base</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="user-ticket-list.html">
+                        <span class="icon"><i class="uil uil-toilet-paper"></i></span>
+                        <span class="title">My Issues</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="check-ticket-update.html">
+                        <span class="icon"><i class="uil uil-bell"></i></span>
+                        <span class="title">Notifications</span>
+                    </a>
+                </li>
+        
+                <li>
+                    <a href="profile-user.html">
+                        <span class="icon"><i class="uil uil-user"></i></span>
+                        <span class="title">Profile </span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="uil uil-setting"></i></span>
+                        <span class="title">Feedback</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="index.html">
+                        <span class="icon"><i class="uil uil-signout"></i></span>
+                        <span class="title">Sign Out</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+     <!------------ Main ------------>
+     <div class="main">
+        <div class="topbar">
+            <div class="toggle" id="toggle">
+                <i class="uil uil-arrow"></i>
+            </div>
+
+        <div class="search-user-container">
+
+            
+            <div class="new-items">
+                <h4>New <span><i class="uil uil-angle-down"></i></span></h4>
+                <div class="new-items-dropdown">
+                    <a href="new-ticket.html">Ticket</a>
+                    <a href="#">Feedback</a>
+                    <a href="#">Other</a>
+                </div>
+            </div>
+
+
+    
+            <!-- <div class="search">
+                <label>
+                    <input type="text" placeholder="search user">
+                    <i class="uil uil-search"></i>
+                </label>
+            </div> -->
+
+    
+            <div class="user-container">
+                <div class="user-image">
+                    <img src="assets/images/person.png">
+                </div>
+                <div class="dropdown-content">
+                    <a href="#">Dashboard</a>
+                    <a href="profile-user.html">Profile</a>
+                    <a href="#">Settings</a>
+                    <a href="login.html">Logout</a>
+                </div>
+            </div>
+        </div>
+    
+        </div>
+    
+    
+    
+    
+
+
+    <!-------------------Ticket Details--------------------->
+
+
+
+
+    <div class="details article-form-details">
+        <div class="recentOrders">
+            <div class="cardHeader">
+                <h1>My Profile</h1>
+                <!-- <a href="users.html" class="btn">Cancel</a> -->
+            </div>
+
+
+                <div class="admin-container">
+                    <form id="knowledge-form">
+                        <div class="list-group">
+                            <label for="issue-title">First Name</label>
+                            <input type="text" id="issue-title" name="firstname" required value="John"v readonly>
+                        </div>
+                        <div class="list-group">
+                            <label for="issue-title">Last Name</label>
+                            <input type="text" id="issue-title" name="lastname" required value="Indakwa" readonly>
+                        </div>
+                        <div class="list-group">
+                            <label for="issue-title">Email</label>
+                            <input type="text" id="issue-title" name="email" required value="Johnindakwa@gmail.com">
+                        </div>
+                        <div class="list-group">
+                            <label for="resources">Phone Number</label>
+                            <input type="text" id="resources" name="resources" value="+254702207999">
+                        </div>
+                        <div class="list-group">
+                            <label for="resources">Department</label>
+                            <input type="text" id="resources" name="resources" value="Accounting">
+                        </div>
+                        <div class="list-group">
+                            <label for="resources">Job Title</label>
+                            <input type="text" id="resources" name="resources" value="Intern">
+                        </div>
+                        <div class="list-group">
+                            <label for="resources">Password</label>
+                            <input type="password" id="resources" name="resources" value="Accounting">
+                            <i class="uil uil-eye"></i>
+                        </div>
+                        <div class="list-group">
+                            <label for="resources">Confirm Password</label>
+                            <input type="password" id="resources" name="resources" value="Intern">
+                        </div>
+                        <div class="list-group">
+                            <label for="priority">Department</label>
+                            <select id="priority" name="priority">
+                                <option value="high">Networking</option>
+                                <option value="medium">Server</option>
+                                <option value="low">Infrastructure</option>
+                                <option value="high">Networking</option>
+                                <option value="medium">Server</option>
+                                <option value="low">Infrastructure</option>
+                            </select>
+                        </div>
+
+                        <div class="list-group">
+                            <label for="priority">Role</label>
+                            <select id="priority" name="priority"  disabled>
+                                <option value="high">Admin</option>
+                                <option value="medium">Technican</option>
+                                <option value="low">User</option>
+                            </select>
+                        </div>
+
+                       
+
+                        <div class="form-group">
+                            <input type="submit" value="SAVE">
+                        </div>
+                    </form>
+                </div>
+        
+
+            </div>
+    
+    
+        </div>
+
+</div>
+
+
+
+<!-- Scripts -->
+
+<script src="assets/main.js"></script>
+
+
+<script>
+const pswrdField = document.querySelector(".list-group input[type='password']");
+const toggleBtn = document.querySelector(".list-group i");
+
+
+toggleBtn.onclick = ()=>{
+    if(pswrdField.type == "password"){
+        pswrdField.setAttribute("type","text");
+        toggleBtn.classList.add("active");
+    } else{
+        pswrdField.setAttribute("type", "password");
+        toggleBtn.classList.remove("active");
+    }
+}
+</script>
+
+
+</body>
+</html>

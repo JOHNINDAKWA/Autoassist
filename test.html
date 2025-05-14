@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+  <meta charset="utf-8">
+  <title>Driver Dashboard</title>
+  <style>
+    body {
+      font-family: 'Roboto', 'sans-serif';
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      display: flex;
+    }
+
+    #sidebar {
+      background-color: #030116;
+      color: #fff;
+      width: 200px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .sidebar-items{
+      margin-top: 4rem;
+      display: flex;
+      flex-direction: column;
+    }
+    #sidebar a {
+      color: #fff;
+      text-decoration: none;
+      margin-bottom: 10px;
+      margin-bottom: 2rem;
+    }
+
+    header {
+      background-color: #030116;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+      width: 100%;
+    }
+
+    #content {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+
+    #map-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 80vh;
+      margin-top: 2rem;
+    }
+
+    #map {
+      width: 90%;
+      height: 90%;
+      border-radius: 10px;
+    }
+
+    #floating-panel {
+      position: absolute;
+      top: 80px;
+      left: calc(100% - 400px);
+      transform: translateX(-50%);
+      z-index: 5;
+      background-color: #fff;
+      padding: 10px;
+      border: 1px solid #999;
+      text-align: center;
+      font-family: 'Roboto', 'sans-serif';
+      width: 400px;
+    }
+
+    #status-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 1rem;
+    }
+
+    #status-select {
+      margin-right: 1rem;
+    }
+
+    #update-status-btn {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    footer {
+      background-color: #030116;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div id="sidebar">
+    <div class="sidebar-items">
+    <a href="#">Dashboard</a>
+    <a href="#">Status Update</a>
+    <a href="#">Notifications</a>
+    </div>
+  </div>
+
+  <div id="content">
+    <header>
+      <h1>Driver Dashboard</h1>
+    </header>
+
+    <div id="map-container">
+      <div id="map"></div>
+    </div>
+
+    <div id="floating-panel">
+      <b>Start: </b>
+      <select id="start">
+        <option value="nairobi, ke">Nairobi</option>
+        <option value="mombasa, ke">Mombasa</option>
+        <option value="kisumu, ke">Kisumu</option>
+      </select>
+      <b>End: </b>
+      <select id="end">
+        <option value="nairobi, ke">Nairobi</option>
+        <option value="mombasa, ke">Mombasa</option>
+        <option value="kisumu, ke">Kisumu</option>
+      </select>
+    </div>
+
+
+    <script>
+      function initMap() {
+        var directionsService = new google.maps.DirectionsService;
+        var directionsDisplay = new google.maps.DirectionsRenderer;
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 7,
+          center: {lat: 1.29, lng: 36.82}
+        });
+        directionsDisplay.setMap(map);
+
+        var onChangeHandler = function () {
+          calculateAndDisplayRoute(directionsService, directionsDisplay);
+        };
+        document.getElementById('start').addEventListener('change', onChangeHandler);
+        document.getElementById('end').addEventListener('change', onChangeHandler);
+        document.getElementById('status').addEventListener('change', onChangeHandler);
+      }
+
+      function calculateAndDisplayRoute(directionsService, directionsDisplay) {
+        directionsService.route({
+          origin: document.getElementById('start').value,
+          destination: document.getElementById('end').value,
+          travelMode: 'DRIVING'
+        }, function (response, status) {
+          if (status === 'OK') {
+            directionsDisplay.setDirections(response);
+          } else {
+            window.alert('Directions request failed due to ' + status);
+          }
+        });
+      }
+    </script>
+
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap"></script>
+
+    <footer>
+      &copy; 2023 Driver Dashboard
+    </footer>
+  </div>
+</body>
+</html>
+
+
+
+

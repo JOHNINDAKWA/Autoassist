@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Generation</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.report-section {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 40%;
+}
+
+h2, h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.report-form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+input[type="text"],
+input[type="date"],
+select {
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.generate-btn {
+    padding: 10px 20px;
+    background-color: var(--blue);
+    color: #fff;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 25%;
+    margin: 0 auto;
+}
+
+.generate-btn:hover {
+    background-color: var(--white);
+    color: var(--blue);
+    border-color: var(--blue);
+}
+
+.generated-reports {
+    margin-top: 30px;
+}
+
+
+.report-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.delete-download-btns {
+    display: flex;
+    align-items: center;
+}
+
+.download-btn, .delete-btn {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.download-btn {
+    background-color: #4CAF50;
+    color: #fff;
+    margin-right: 10px;
+}
+
+.download-btn:hover {
+    background-color: #45a049;
+}
+
+.delete-btn {
+    background-color: #f44336;
+    color: #fff;
+}
+
+.delete-btn:hover {
+    background-color: #da4333;
+}
+
+    </style>
+</head>
+<body>
+    <div class="report-section">
+        <h2>Generate Reports</h2>
+        <div class="report-form">
+            <label for="report-type">Select Report Type:</label>
+            <select id="report-type">
+                <option value="incident">Incident Report</option>
+                <option value="performance">Performance Report</option>
+                <option value="trend-analysis">Trend Analysis Report</option>
+            </select>
+            <label for="parameters">Select Parameters:</label>
+            <input type="text" id="parameters">
+            <label for="date-range">Select Date Range:</label>
+            <input type="date" id="start-date">
+            <input type="date" id="end-date">
+            <button class="generate-btn">Generate Report</button>
+        </div>
+        <div class="generated-reports">
+            <h3>Generated Reports</h3>
+            <div class="report-item">
+                <p>Incident Report - 2023-09-01 to 2023-09-30</p>
+                <div class=".delete-download-btns ">
+                <button class="download-btn">Download</button>
+                <button class="delete-btn">Delete</button>
+                </div>
+            </div>
+            <div class="report-item">
+                <p>Incident Report - 2023-09-01 to 2023-09-30</p>
+                <div class=".delete-download-btns ">
+                <button class="download-btn">Download</button>
+                <button class="delete-btn">Delete</button>
+                </div>
+            </div>
+            <div class="report-item">
+                <p>Incident Report - 2023-09-01 to 2023-09-30</p>
+                <div class=".delete-download-btns ">
+                <button class="download-btn">Download</button>
+                <button class="delete-btn">Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

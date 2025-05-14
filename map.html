@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>ADMIN PRODUCT SECTION</title>
+
+
+    <style>
+#content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+#map-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    margin-top: 2rem;
+}
+
+#map {
+    width: 90%;
+    height: 90%;
+    border-radius: 10px;
+}
+
+#floating-panel {
+    position: absolute;
+    top: 8px;
+    right: calc(100% - 800px);
+    transform: translateX(-50%);
+    z-index: 5;
+    background-color: #fff;
+    padding: 10px;
+    /* border: 1px solid #999; */
+    text-align: center;
+    font-family: 'Roboto', 'sans-serif';
+    width: 500px;
+}
+
+#status-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+#status-select {
+    margin-right: 1rem;
+}
+
+#update-status-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+footer {
+    background-color: #030116;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+    </style>
+
+
+</head>
+<body>
+    <!------------ Navigation ------------>
+    <div class="container">
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="admin-dashboard.html">
+                        <img src="logo1.png" style="width: 150px; margin: 20px 50px 10px 50px;">
+                    </a>
+                </li>
+
+                <li>
+                    <a href="admin-dashboard.html">
+                        <span class="icon"><i class="uil uil-home"></i></span>
+                        <span class="title">Dashboard</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="inventory-admin.html">
+                        <span class="icon"><i class="uil uil-slack"></i></span>
+                        <span class="title">Delivery Status</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="orders-admin.html">
+                        <span class="icon"><i class="uil uil-clipboard-alt"></i></span>
+                        <span class="title">My Deliveries</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="uil uil-setting"></i></span>
+                        <span class="title">Settings</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="uil uil-question"></i></span>
+                        <span class="title">Help Center</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="Homepage/home.html">
+                        <span class="icon"><i class="uil uil-signout"></i></span>
+                        <span class="title">Sign Out</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+      <!------------ Main ------------>
+      <div class="main">
+        <div class="topbar">
+            <div class="toggle" id="toggle">
+                <i class="uil uil-arrow"></i>
+            </div>
+
+        <div class="search-user-container">
+    
+            <div style="margin-top: 7px; margin-left: 7px;">
+                <h2> Route Selection</h2>
+            </div>
+    
+            <div class="user-container">
+                <div class="user-image">
+                    <img src="assets/images/person.png">
+                </div>
+                <div class="dropdown-content">
+                    <a href="index.html">Dashboard</a>
+                    <a href="#">Notifications</a>
+                    <a href="profile-admin.html">Profile</a>
+                    <a href="#">Settings</a>
+                    <a href="login.html">Logout</a>
+                </div>
+            </div>
+        </div>
+    
+        </div>
+    
+
+
+    <!-------------------Ticket Details--------------------->
+
+<div class="details">
+    <div class="recentOrders">
+
+
+
+
+        <div id="content">
+
+        
+            <div id="map-container">
+            <div id="map"></div>
+            </div>
+        
+            <div id="floating-panel">
+            <b>Start: </b>
+            <select id="start">
+                <option value="nairobi, ke">Nairobi</option>
+                <option value="mombasa, ke">Mombasa</option>
+                <option value="kisumu, ke">Kisumu</option>
+                <option value="nakuru, ke">Nakuru</option>
+                <option value="eldoret, ke">Eldoret</option>
+                <option value="embu, ke">Embu</option>
+                <option value="nanyuki, ke">Nanyuki</option>
+                <option value="isiolo, ke">Isiolo</option>
+                <option value="nyeri, ke">Nyeri</option>
+                <option value="thika, ke">Thika</option>
+                <option value="machakos, ke">Machakos</option>
+                <option value="kitui, ke">Kitui</option>
+                <option value="garissa, ke">Garissa</option>
+                <option value="vihiga, ke">Vihiga</option>
+                <option value="lamu, ke">Lamu</option>
+                <option value="lodwar, ke">Lodwar</option>
+                <option value="marsabit, ke">Marsabit</option>
+                <option value="meru, ke">Meru</option>
+                <option value="migori, ke">Migori</option>
+                <option value="moyale, ke">Moyale</option>
+                <option value="mumias, ke">Mumias</option>
+                <option value="murang'a, ke">Murang'a</option>
+                <option value="mwingi, ke">Mwingi</option>
+                <option value="nairobi, ke">Nairobi</option>
+                <option value="nandi, ke">Nandi</option>
+                <option value="narok, ke">Narok</option>
+                <option value="nyahururu, ke">Nyahururu</option>
+                <option value="nyamira, ke">Nyamira</option>
+                <option value="nyandarua, ke">Nyandarua</option>
+                <option value="nzoia, ke">Nzoia</option>
+                <option value="rabai, ke">Rabai</option>
+                <option value="rongai, ke">Rongai</option>
+                <option value="rongo, ke">Rongo</option>
+                <option value="samburu, ke">Samburu</option>
+                <option value="siaya, ke">Siaya</option>
+                <option value="taita, ke">Taita</option>
+                <option value="tana, ke">Tana</option>
+                <option value="taveta, ke">Taveta</option>
+                <option value="tharaka, ke">Tharaka</option>
+                <option value="tigania, ke">Tigania</option>
+                <option value="viwandani, ke">Viwandani</option>
+                <option value="wajir, ke">Wajir</option>
+                <option value="west pokot, ke">West Pokot</option>
+                <option value="yala, ke">Yala</option>
+                <option value="wundanyi, ke">Wundanyi</option>
+              </select>  
+            <b style="margin-left: 2rem;">End: </b>
+            <select id="end">
+                <option value="nairobi, ke">Nairobi</option>
+                <option value="mombasa, ke">Mombasa</option>
+                <option value="kisumu, ke">Kisumu</option>
+                <option value="nakuru, ke">Nakuru</option>
+                <option value="eldoret, ke">Eldoret</option>
+                <option value="embu, ke">Embu</option>
+                <option value="nanyuki, ke">Nanyuki</option>
+                <option value="isiolo, ke">Isiolo</option>
+                <option value="nyeri, ke">Nyeri</option>
+                <option value="thika, ke">Thika</option>
+                <option value="machakos, ke">Machakos</option>
+                <option value="kitui, ke">Kitui</option>
+                <option value="garissa, ke">Garissa</option>
+                <option value="vihiga, ke">Vihiga</option>
+                <option value="lamu, ke">Lamu</option>
+                <option value="lodwar, ke">Lodwar</option>
+                <option value="marsabit, ke">Marsabit</option>
+                <option value="meru, ke">Meru</option>
+                <option value="migori, ke">Migori</option>
+                <option value="moyale, ke">Moyale</option>
+                <option value="mumias, ke">Mumias</option>
+                <option value="murang'a, ke">Murang'a</option>
+                <option value="mwingi, ke">Mwingi</option>
+                <option value="nairobi, ke">Nairobi</option>
+                <option value="nandi, ke">Nandi</option>
+                <option value="narok, ke">Narok</option>
+                <option value="nyahururu, ke">Nyahururu</option>
+                <option value="nyamira, ke">Nyamira</option>
+                <option value="nyandarua, ke">Nyandarua</option>
+                <option value="nzoia, ke">Nzoia</option>
+                <option value="rabai, ke">Rabai</option>
+                <option value="rongai, ke">Rongai</option>
+                <option value="rongo, ke">Rongo</option>
+                <option value="samburu, ke">Samburu</option>
+                <option value="siaya, ke">Siaya</option>
+                <option value="taita, ke">Taita</option>
+                <option value="tana, ke">Tana</option>
+                <option value="taveta, ke">Taveta</option>
+                <option value="tharaka, ke">Tharaka</option>
+                <option value="tigania, ke">Tigania</option>
+                <option value="viwandani, ke">Viwandani</option>
+                <option value="wajir, ke">Wajir</option>
+                <option value="west pokot, ke">West Pokot</option>
+                <option value="yala, ke">Yala</option>
+                <option value="wundanyi, ke">Wundanyi</option>
+              </select>  
+            </div>
+        
+        
+            <script>
+            function initMap() {
+                var directionsService = new google.maps.DirectionsService;
+                var directionsDisplay = new google.maps.DirectionsRenderer;
+                var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 7,
+                center: {lat: 1.29, lng: 36.82}
+                });
+                directionsDisplay.setMap(map);
+        
+                var onChangeHandler = function () {
+                calculateAndDisplayRoute(directionsService, directionsDisplay);
+                };
+                document.getElementById('start').addEventListener('change', onChangeHandler);
+                document.getElementById('end').addEventListener('change', onChangeHandler);
+                document.getElementById('status').addEventListener('change', onChangeHandler);
+            }
+        
+            function calculateAndDisplayRoute(directionsService, directionsDisplay) {
+                directionsService.route({
+                origin: document.getElementById('start').value,
+                destination: document.getElementById('end').value,
+                travelMode: 'DRIVING'
+                }, function (response, status) {
+                if (status === 'OK') {
+                    directionsDisplay.setDirections(response);
+                } else {
+                    window.alert('Directions request failed due to ' + status);
+                }
+                });
+            }
+            </script>
+        
+            <script async defer src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap"></script>
+
+
+</div> 
+
+<script src="assets/main.js">
+
+</script>
+
+
+
+</body>
+</html>
+
+
+
+

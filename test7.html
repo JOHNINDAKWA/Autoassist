@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Form Title</title>
+    <style>
+.welcome-back-email-address {
+position: relative;
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+  margin-left: 50px;
+}
+
+.label {
+  font-size: 20px;
+  color: black;
+  position: absolute;
+  top: -12px;
+  left: 15px;
+  z-index: 2;
+  background-color: white;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+.email-field {
+  width: 1000px;
+  height: 40px;
+  padding: 10px 16px;
+  border: 1px solid black;
+  border-radius: 6px;
+  font-size: 16px;
+  color: #333;
+}
+
+.email-field:focus {
+  outline: none;
+  border: 1px solid #007bff;
+}
+
+    </style>
+</head>
+
+    <body>
+        <div class="welcome-back-email-address">
+            <span class="label">Email address</span>
+            <input type="email" class="email-field" />
+          </div>
+</body>
+
+</html>

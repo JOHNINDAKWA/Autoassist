@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>TICKETTING SYSTEM</title>
+</head>
+
+<body>
+    <div class="login-container">
+        <div class="introduction">
+            <div class="overview">
+                <div class="intro-text">
+                    <img src="peg.png">
+                    <h2>Welcome to <br><span>AutoAssist</span></h2>
+                    <p>In a hurry? Want quick and certain assistance ? We have your back with AutoAssist!</p>
+                </div>
+            </div>
+        </div>
+        <div class="login">
+            <div class="login-div">
+            <h2>Log In</h2>
+            <input type="text" placeholder="Username" name="username" required>
+            <input type="password" placeholder="Password" name="password" required>
+            <a href="#"><button id="loginButton">Login</button></a>
+
+            <p>Don't have an account? <a href="index.html">Contact Admin</a></p>
+            <div class="forgot-pass"><p><a href="index.html">Forgot Password?</a></p></div>
+            </div>
+            
+        
+            <div class="error-container" id="errorSection">Invalid username or password. Please try again.</div>
+        </div>
+    </div>
+    <script>
+        const errorDiv = document.getElementById('errorSection');
+        const loginButton = document.getElementById('loginButton');
+
+        loginButton.addEventListener('click', () => {
+            // Simulate an error response
+            showError('Invalid username or password. Please try again.');
+        });
+
+        function showError(message) {
+            errorDiv.innerText = message;
+            errorDiv.style.display = 'block';
+            setTimeout(() => {
+                errorDiv.style.display = 'none';
+            }, 3000); // Disappear after 3 seconds
+        }
+    </script>
+</body>
+
+</html>

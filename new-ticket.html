@@ -1,0 +1,231 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>TICKETTING SYSTEM</title>
+</head>
+<body>
+    <!------------ Navigation ------------>
+    <div class="container">
+        <div class="navigation" onmouseover="showToggle()" onmouseout="hideToggle()">
+            <ul>
+                <li>
+                    <a href="index.html">
+                        <span class="icon"><i class="uil uil-assistive-listening-systems"></i></span>
+                        <span class="title">AutoAsisst</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="index.html">
+                        <span class="icon"><i class="uil uil-home"></i></span>
+                        <span class="title">Dashboard</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="unassigned-tickets.html">
+                        <span class="icon"><i class="uil uil-users-alt"></i></span>
+                        <span class="title">Tickets</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="my-tickets.html">
+                        <span class="icon"><i class="uil uil-users-alt"></i></span>
+                        <span class="title">My Tickets</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="uil uil-bell"></i></span>
+                        <span class="title">Notifications</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="users.html">
+                        <span class="icon"><i class="uil uil-users-alt"></i></span>
+                        <span class="title">User Management </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="generate-reports.html">
+                        <span class="icon"><i class="uil uil-file-graph"></i></span>
+                        <span class="title">Reports</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="troubleshoot-tips-admin.html">
+                        <span class="icon"><i class="uil uil-file-graph"></i></span>
+                        <span class="title">Knowledge Base</span>
+                    </a>
+                </li>
+        
+                <li>
+                    <a href="profile-admin.html">
+                        <span class="icon"><i class="uil uil-user"></i></span>
+                        <span class="title">Profile </span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="uil uil-setting"></i></span>
+                        <span class="title">Settings</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="user-ticket-list.html">
+                        <span class="icon"><i class="uil uil-signout"></i></span>
+                        <span class="title">Sign Out</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+     <!------------ Main ------------>
+     <div class="main">
+        <div class="topbar">
+            <div class="toggle" id="toggle">
+                <i class="uil uil-arrow"></i>
+            </div>
+        <div class="search-user-container">
+
+            
+            <div class="new-items">
+                <h4>New <span><i class="uil uil-angle-down"></i></span></h4>
+                <div class="new-items-dropdown">
+                    <a href="new-ticket.html">Ticket</a>
+                    <a href="#">Feedback</a>
+                    <a href="#">Other</a>
+                </div>
+            </div>
+
+
+    
+            <!-- <div class="search">
+                <label>
+                    <input type="text" placeholder="search user">
+                    <i class="uil uil-search"></i>
+                </label>
+            </div> -->
+
+    
+            <div class="user-container">
+                <div class="user-image">
+                    <img src="assets/images/person.png">
+                </div>
+                <div class="dropdown-content">
+                    <a href="#">Dashboard</a>
+                    <a href="profile-user.html">Profile</a>
+                    <a href="#">Settings</a>
+                    <a href="login.html">Logout</a>
+                </div>
+            </div>
+        </div>
+    
+        </div>
+    
+    
+
+    <!-------------------Ticket Details--------------------->
+
+<div class="details ticket-form-details">
+    <div class="recentOrders">
+        <div class="cardHeader">
+            <h2>New Ticket</h2>
+            <a href="user-ticket-list.html" class="btn">Back to Ticket List</a>
+        </div>
+
+        <div class="ticket-form">
+            <form action="#" method="post">
+                <div class="form-group">
+                    <label for="subject">Subject:</label>
+                    <input type="text" id="subject" name="subject">
+                </div>
+
+                <div class="form-group">
+                    <label for="priority">Priority:</label>
+                    <select id="priority" name="priority">
+                        <option value="high">High</option>
+                        <option value="medium">Medium</option>
+                        <option value="low">Low</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="priority">Category:</label>
+                    <select id="priority" name="priority">
+                        <option value="high">Network</option>
+                        <option value="medium">Server</option>
+                        <option value="low">Hardware</option>
+                        <option value="high">Availability</option>
+                        <option value="medium">Performance</option>
+                        <option value="low">General</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="ticket-body">Ticket Body:</label>
+                    <div style="display: flex; gap: 5px; align-items: center;">
+                        <div class="file-input-container">
+                            <label class="custom-file-button" for="file">Choose a File</label>
+                            <input type="file" class="custom-file-input" id="file" name="file" onchange="updateFileName(this)">
+                        </div>
+                        <p id="file-name" style="    text-decoration: none; font-style: italic; color: black; cursor: pointer;"></p>
+                    </div>
+                    <div id="image-preview" class="image-preview"></div>
+                    <textarea id="mytextarea" name="ticket-body" required></textarea>
+                </div>
+                <div class="form-group">
+                    <a class="btn-submit" href="#popup1">submit</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+
+
+<div id="popup1" class="overlay">
+	<div class="popup">
+        <a class="close" href="#">&times;</a>
+		<h3>Ticket Submitted Successfully</h3>
+		<div class="content">
+			<i class="uil uil-check-circle"></i>
+		</div>
+	</div>
+</div>
+
+<!-- Scripts -->
+<script>
+    tinymce.init({
+    selector: '#mytextarea',
+    plugins: [
+        'a11ychecker','advlist','advcode','advtable','autolink','checklist','export',
+        'lists','link','image','charmap','preview','anchor','searchreplace','visualblocks',
+        'powerpaste','fullscreen','formatpainter','insertdatetime','media','table','wordcount'
+    ],
+    toolbar: 'undo redo | formatpainter casechange blocks | bold italic backcolor | ' +
+        'alignleft aligncenter alignright alignjustify | ' +
+        'bullist numlist checklist outdent indent | removeformat | a11ycheck code table help'
+    });
+</script>
+<script src="assets/main.js"></script>
+<script>
+    // JavaScript function to update the selected file's name
+    function updateFileName(input) {
+        var fileName = input.files[0].name;
+        document.getElementById("file-name").innerText = fileName;
+    }
+</script>
+</body>
+</html>
