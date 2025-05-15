@@ -1,56 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
-    <link rel="stylesheet" href="styles.css">
-    <title>TICKETTING SYSTEM</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Payment Required</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: white;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .modal {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 2rem 3rem;
+      border-radius: 20px;
+      text-align: center;
+      max-width: 500px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+      z-index: 1;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+      color: #ffffff;
+    }
+
+    p {
+      font-size: 1.1rem;
+      color: #e0e0e0;
+      margin-bottom: 2rem;
+    }
+
+    .btn {
+      padding: 0.8rem 2rem;
+      background: #01A1A1;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-size: 1rem;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+
+    .btn:hover {
+      background: #018585;
+    }
+
+    .watermark {
+      position: absolute;
+      bottom: 20px;
+      font-size: 0.9rem;
+      opacity: 0.5;
+    }
+
+    /* Payment Modal Styles */
+    .payment-modal {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0,0,0,0.9);
+      backdrop-filter: blur(2px);
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+      animation: fadeIn 0.3s ease-in-out;
+    }
+
+    .payment-content {
+      background: #ffffff10;
+      padding: 2rem;
+      border-radius: 20px;
+      max-width: 400px;
+      text-align: center;
+      color: #fff;
+      border: 1px solid #ffffff22;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+    }
+
+    .close-btn {
+      background: none;
+      border: none;
+      color: #ccc;
+      font-size: 1.2rem;
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      cursor: pointer;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0 }
+      to { opacity: 1 }
+    }
+  </style>
 </head>
-
 <body>
-    <div class="login-container">
-        <div class="introduction">
-            <div class="overview">
-                <div class="intro-text">
-                    <img src="peg.png">
-                    <h2>Welcome to <br><span>AutoAssist</span></h2>
-                    <p>In a hurry? Want quick and certain assistance ? We have your back with AutoAssist!</p>
-                </div>
-            </div>
-        </div>
-        <div class="login">
-            <div class="login-div">
-            <h2>Log In</h2>
-            <input type="text" placeholder="Username" name="username" required>
-            <input type="password" placeholder="Password" name="password" required>
-            <a href="#"><button id="loginButton">Login</button></a>
+  <div class="modal">
+    <h1>Access Suspended</h1>
+    <p>This project was created and hosted for review purposes.<br>
+    To continue accessing the live version and receive the source code,<br><strong>payment must be completed.</strong></p>
+    <button class="btn" id="payBtn">Make Payment</button>
+  </div>
 
-            <p>Don't have an account? <a href="index.html">Contact Admin</a></p>
-            <div class="forgot-pass"><p><a href="index.html">Forgot Password?</a></p></div>
-            </div>
-            
-        
-            <div class="error-container" id="errorSection">Invalid username or password. Please try again.</div>
-        </div>
+  <div class="watermark">© 2025 John Indakwa. All rights reserved.</div>
+
+  <!-- Payment Modal -->
+  <div class="payment-modal" id="paymentModal">
+    <div class="payment-content">
+      <button class="close-btn" onclick="closeModal()">✕</button>
+      <h2>Payment Instructions</h2>
+      <p>Please make your payment via <strong>M-Pesa</strong> to:</p>
+      <p style="font-size: 1.5rem; margin: 1rem 0;"><strong>254702207999</strong></p>
+      <p><em>Be generous – this work took real time and skill to deliver.</em><br>Generosity ensures you get continued support and goodwill.</p>
     </div>
-    <script>
-        const errorDiv = document.getElementById('errorSection');
-        const loginButton = document.getElementById('loginButton');
+  </div>
 
-        loginButton.addEventListener('click', () => {
-            // Simulate an error response
-            showError('Invalid username or password. Please try again.');
-        });
+  <script>
+    const modal = document.getElementById('paymentModal');
+    const payBtn = document.getElementById('payBtn');
 
-        function showError(message) {
-            errorDiv.innerText = message;
-            errorDiv.style.display = 'block';
-            setTimeout(() => {
-                errorDiv.style.display = 'none';
-            }, 3000); // Disappear after 3 seconds
-        }
-    </script>
+    payBtn.addEventListener('click', () => {
+      modal.style.display = 'flex';
+    });
+
+    function closeModal() {
+      modal.style.display = 'none';
+    }
+  </script>
 </body>
-
 </html>
