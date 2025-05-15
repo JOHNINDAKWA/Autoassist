@@ -5,6 +5,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+   
     
 }
 
@@ -21,12 +22,13 @@
 body{
     min-height: 100vh;
     overflow-x: hidden;
-
+    display: none;
 }
 
 .container{
     position: relative;
     width: 100%;
+    display: none;
 }
 
 a {
@@ -43,6 +45,7 @@ a {
     border-left: 10px solid var(--blue);
     transition: 0.5s;
     overflow-x: hidden;
+    display: none;
 }
 
 .navigation.active{
@@ -153,6 +156,7 @@ a {
     min-height: 100vh;
     background: var(--white);
     transition: 0.5s;
+    display: none;
 }
 
 .main.active{
